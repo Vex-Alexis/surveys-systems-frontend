@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 100%;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.card-description{
+    margin: 12px 0 12px 0;
+    min-height: 40px;
+}

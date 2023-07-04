@@ -1,0 +1,50 @@
+<div class="sidenav-container">
+    <mat-card class="sidebar">
+        <mat-action-list>
+
+            <div class="sidebar-header">
+                <img class="profile-image"
+                    src="https://w7.pngwing.com/pngs/177/551/png-transparent-user-interface-design-computer-icons-default-stephen-salazar-graphy-user-interface-design-computer-wallpaper-sphere-thumbnail.png"
+                    alt="">
+                <div class="profile-details">
+                    <h4 class="profile-name">Alexis Chavarria</h4>
+                    <p class="profile-role">Desarrollador Java</p>
+                </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <mat-nav-list>
+                <mat-list-item routerLink="/inside/home" routerLinkActive="active">
+                    <mat-icon mat-list-icon>home</mat-icon>
+                    <span class="list-item-label">Inicio</span>
+                </mat-list-item>
+
+                <mat-list-item routerLink="/inside/profile" routerLinkActive="active">
+                    <mat-icon mat-list-icon>account_circle</mat-icon>
+                    <span class="list-item-label">Perfil</span>
+                </mat-list-item>
+
+                <mat-list-item routerLink="/inside/survey" routerLinkActive="active">
+                    <mat-icon mat-list-icon>edit_document</mat-icon>
+                    <span class="list-item-label">Crear encuesta</span>
+                </mat-list-item>
+
+                <mat-list-item routerLink="/inside/list-survey" routerLinkActive="active">
+                    <mat-icon mat-list-icon>source</mat-icon>
+                    <span class="list-item-label">Mostrar encuestas</span>
+                </mat-list-item>
+
+                <mat-divider></mat-divider>
+
+                <mat-list-item>
+                    <mat-icon mat-list-icon>logout</mat-icon>
+                    <span class="list-item-label">Salir</span>
+                </mat-list-item>
+            </mat-nav-list>
+            <!-- <button mat-list-item (click)="logout()">
+                    <mat-icon mat-list-icon>logout</mat-icon>Salir
+                </button> -->
+        </mat-action-list>
+    </mat-card>
+</div>
