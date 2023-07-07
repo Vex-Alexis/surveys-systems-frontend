@@ -30,6 +30,7 @@ import { SidebarComponent } from './pages/inside/sidebar/sidebar.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ListsurveyComponent } from './pages/inside/listsurvey/listsurvey.component';
 import { HomeComponent } from './pages/inside/home/home.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { HomeComponent } from './pages/inside/home/home.component';
     DashboardComponent,
     SidebarComponent,
     ProfileComponent,
-    ListsurveyComponent
+    ListsurveyComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
