@@ -20,7 +20,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSliderModule } from '@angular/material/slider';
+import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -31,6 +34,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ListsurveyComponent } from './pages/inside/listsurvey/listsurvey.component';
 import { HomeComponent } from './pages/inside/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
+
+
 
 @NgModule({
   declarations: [
@@ -62,8 +67,11 @@ import { SignupComponent } from './pages/signup/signup.component';
     MatDividerModule,
     MatSidenavModule,
     MatTableModule,
-    MatPaginatorModule
-    
+    MatPaginatorModule,
+    MatRadioModule,
+    MatSliderModule,
+    FormsModule,
+    MatCheckboxModule,
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'es-CO' }],
   bootstrap: [AppComponent]

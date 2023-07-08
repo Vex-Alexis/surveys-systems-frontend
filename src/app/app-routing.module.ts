@@ -9,44 +9,17 @@ import { HomeComponent } from './pages/inside/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component:LoginComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: 'login',
-    component:LoginComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: 'signup',
-    component:SignupComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: 'inside',
-    component:DashboardComponent,
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component:LoginComponent, pathMatch: 'full' },
+  { path: 'signup', component:SignupComponent, pathMatch: 'full' },
+  { path: 'inside', component:DashboardComponent,
     children:[
-      {
-        path: 'home',
-        component: HomeComponent
-      },
-      {
-        path: 'profile',
-        component: ProfileComponent
-      },
-      {
-        path: 'survey',
-        component:SurveyComponent,
-      },
-      {
-        path: 'list-survey',
-        component: ListsurveyComponent,
-      }
+      { path: 'home', component: HomeComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'survey', component:SurveyComponent },
+      { path: 'list-survey', component: ListsurveyComponent },
     ]
   },
-
 ];
 
 @NgModule({

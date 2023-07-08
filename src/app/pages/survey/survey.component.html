@@ -11,32 +11,58 @@
 
                     <form action="">
 
-                        <mat-form-field class="full-width" appearance="outline">
+                        <mat-form-field class="full-width" appearance="outline" disabled>
                             <mat-label>Documento de identidad</mat-label>
-                            <input matInput placeholder="Cédula">
+                            <input matInput placeholder="Cédula" disabled>
                         </mat-form-field>
 
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Correo electrónico</mat-label>
-                            <input matInput placeholder="Email">
+                            <input matInput placeholder="Email" disabled>
                         </mat-form-field>
 
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Comentario</mat-label>
-                            <textarea matInput placeholder="Agregue su respuesta"></textarea>
+                            <textarea matInput placeholder="Agregue su respuesta" required></textarea>
                         </mat-form-field>
 
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Marca favorita de PC</mat-label>
-                            <mat-select>
-                                <mat-option>Dell</mat-option>
-                                <mat-option>Hp</mat-option>
-                                <mat-option>Lenovo</mat-option>
-                                <mat-option>Asus</mat-option>
-                                <mat-option>Acer</mat-option>
+                            <mat-select required>
+                                <mat-option value="1">Dell</mat-option>
+                                <mat-option value="2">Hp</mat-option>
+                                <mat-option value="3">Lenovo</mat-option>
+                                <mat-option value="4">Asus</mat-option>
+                                <mat-option value="5">Acer</mat-option>
                             </mat-select>
                         </mat-form-field>
 
+                        <div class="example-container">
+                            <mat-form-field class="" appearance="outline">
+                                <mat-label>CPU</mat-label>
+                                <mat-select>
+                                    <mat-option value="1">Intel</mat-option>
+                                    <mat-option value="2">AMD</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field class="" appearance="outline">
+                                <mat-label>Tarjeta gráfica</mat-label>
+                                <mat-select>
+                                    <mat-option value="1">NVIDIA</mat-option>
+                                    <mat-option value="2">AMD</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <mat-card-content class="mb20 mr20">
+                            <mat-label class="custom-label">Nivel de satisfacción</mat-label>
+                            <mat-checkbox class="example-margin" [(ngModel)]="inputDisabled" name="satisfaccion"></mat-checkbox>
+                            <mat-slider min="0" max="10" step="1" color="accent" discrete="true" showTickMarks="true" [disabled]="!inputDisabled">
+                                <input  matSliderThumb >
+                            </mat-slider>
+                        </mat-card-content>
+                        
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Fecha y hora</mat-label>
                             <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha y hora" readonly>
@@ -44,13 +70,12 @@
                             <mat-datepicker #picker></mat-datepicker>
                         </mat-form-field>
 
+
                         <div class="container text-center">
                             <button mat-raised-button color="primary">Enviar</button>
                             <button style="margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
                         </div>
-
                     </form>
-                    <br><br><br>
                 </mat-card>
             </div>
         </div>

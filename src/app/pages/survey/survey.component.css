@@ -1,3 +1,17 @@
-.surveyContainer{
+.surveyContainer {
     padding: 24px;
+}
+
+.example-container mat-form-field+mat-form-field {
+    margin-left: 8px;
+}
+
+mat-slider {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.custom-label {
+    font-size: 16px;
+    color: #333;
 }
